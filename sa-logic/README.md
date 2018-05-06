@@ -51,5 +51,5 @@ Pushing a python app to CloudFoundry is extremely simple. You can use Pivotal We
 There were few changes we needed to do to the original app:
 * Add new `manifest.yml` - deployment descriptor that describes how to push to CloudFoundry, e.g. memory requirements, buildpack, start command, etc.
 * Add new `sa/nltk.txt` - python buildpack uses nltk to download extra packages, add one-liner `punkt` to this file
-* Modify `sa/requirements.txt - add one-liner `textblob==0.15.0`
+* Modify `sa/requirements.txt` - add one-liner `textblob==0.15.0`
 * Modify `sa/sentiment_analysis.py` - add `PORT` variable (that the platform will bind the process to, typically 8080)

@@ -13,12 +13,6 @@
 ## Pushing the container
 ` $ docker push $DOCKER_USER_ID/sentiment-analysis-frontend `
 
-## Pushing to CloudFoundry (with a staticfile buildpack)
-`yarn`
-`yarn build`
-`cf push`
-
-
 # Pushing to CloudFoundry
 Pushing a NodeJS app to CloudFoundry can be done in few different ways. Simplest is to build your app and push it with `staticfile_buildpack`. You can use Pivotal Web Services (http://run.pivotal.io) if you don't have access to your company's CloudFoundry platform.
 
@@ -27,6 +21,7 @@ Pushing a NodeJS app to CloudFoundry can be done in few different ways. Simplest
 
 ## Build Application
 `yarn`
+
 `yarn build`
 
 ## Deploy Application
