@@ -1,8 +1,11 @@
 from textblob import TextBlob
 from flask import Flask, request, jsonify
 
+import os
+
 app = Flask(__name__)
 
+port = int(os.getenv("PORT"))
 
 @app.route("/analyse/sentiment", methods=['POST'])
 def analyse_sentiment():
@@ -13,6 +16,5 @@ def analyse_sentiment():
         polarity=polarity
     )
 
-
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=port)

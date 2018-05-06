@@ -1,0 +1,7 @@
+---
+applications:
+- name: sentiment-analysis-logic
+  buildpack: python_buildpack
+  path: sa
+  command: python sentiment_analysis.py
+  memory: 256M

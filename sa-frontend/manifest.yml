@@ -1,0 +1,8 @@
+---
+applications:
+- name: sentiment-analysis-frontend
+  buildpack: staticfile_buildpack
+  path: build
+  memory: 256M
+  env:
+    WEB_APP_URL: http://sentiment-analysis-webapp.cfapps.io

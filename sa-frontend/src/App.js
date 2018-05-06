@@ -10,6 +10,9 @@ const style = {
     marginLeft: 12,
 };
 
+// const WEB_APP_URL = 'http://localhost:8080';
+const WEB_APP_URL = 'http://sentiment-analysis-webapp.cfapps.io';
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -20,7 +23,7 @@ class App extends Component {
     };
 
     analyzeSentence() {
-        fetch('http://localhost:8080/sentiment', {
+        fetch(WEB_APP_URL + '/sentiment', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
